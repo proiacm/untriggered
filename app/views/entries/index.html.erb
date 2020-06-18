@@ -1,5 +1,5 @@
 I am in entires index!
 
 <% @entries.each do |entry| %>
-<%= entry.content %>
+<%= link_to entry.content, entry %>
 <% end %>
