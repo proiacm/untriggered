@@ -4,7 +4,12 @@ class EntriesController < ApplicationController
     before_action :find_entry, only: [:show, :edit, :update, :destroy]
 
     def index
-        @entries = current_user.entries
+        if params[:emotion_id]
+            @emotion = Emotion.find_by_id(params[:emotion_id])
+            @entries = @emotion.entries
+        else
+            @entries = current_user.entries
+        end
     end
 
     def new 
@@ -21,6 +26,7 @@ def create
     end
 
     def show 
+    
     end
 
     def edit 

@@ -1,5 +1,6 @@
-I am in entires index!
+I am in entires index! <br>
 
 <% @entries.each do |entry| %>
-<%= link_to entry.content, entry %>
+Entry: <%= link_to entry.content, entry %> <br>
+Emotion: <%= link_to entry.emotion.name, emotion_entries_path(entry.emotion) %>
 <% end %>
