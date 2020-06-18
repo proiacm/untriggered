@@ -13,7 +13,12 @@ class EntriesController < ApplicationController
     end
 
     def new 
-        @entry = Entry.new(emotion_id: params[:emotion_id])
+        @emotion = Emotion.find_by(id: params[:emotion_id])
+        if @emotion
+            @entry = Entry.new(emotion_id: params[:emotion_id])
+        else
+            redirect_to emotions_path
+        end     
     end   
 
 def create 
@@ -26,7 +31,9 @@ def create
     end
 
     def show 
-    
+        if !@entry 
+            redirect_to entries_path
+        end
     end
 
     def edit 
