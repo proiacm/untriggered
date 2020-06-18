@@ -8,7 +8,11 @@ class EmotionsController < ApplicationController
 
     def show 
       @emotion = current_user.emotions.find_by_id(params[:id])
-      @entries = @emotion.entries
+      if @emotion 
+          @entries = @emotion.entries
+      else
+        redirect_to emotions_path
+      end
     end
 
 end

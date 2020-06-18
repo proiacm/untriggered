@@ -13,7 +13,7 @@ class EntriesController < ApplicationController
     end
 
     def new 
-        @entry = Entry.new
+        @entry = Entry.new(emotion_id: params[:emotion_id])
     end   
 
 def create 
