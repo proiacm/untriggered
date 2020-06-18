@@ -1,0 +1,7 @@
+I'm in emotion show!
+<%= @emotion.name %>
+<% @entries.each do |entry| %>
+<%= entry.content%>
+<% end %>
+
+<%= link_to 'Add New Entry', new_emotion_entry_path(@emotion) %>

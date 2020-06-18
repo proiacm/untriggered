@@ -1,0 +1,8 @@
+I am in emotions index!
+
+<% @emotions.each do |emotion| %>
+<%= link_to emotion.name, emotion %>
+<% end %>
+<hr>
+<%= link_to 'New Entry', new_entry_path %> <br>
+<%= link_to 'All Entries', entries_path %>
