@@ -1,6 +1,6 @@
 I am in emotions index!
 
-<% @emotions.each do |emotion| %>
+<% @emotions.uniq.each do |emotion| %>
 <%= link_to emotion.name, emotion %>
 <% end %>
 <hr>
