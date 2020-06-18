@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   end
 
   root to: 'application#welcome'
+
+  resources :emotions, only: [:index, :show] 
+  resources :entries, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+
+
 end
