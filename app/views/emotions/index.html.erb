@@ -1,7 +1,7 @@
 I am in emotions index!
 
 <% @emotions.uniq.each do |emotion| %>
-<%= link_to emotion.name, entries_path %>
+<%= link_to emotion.name, emotion %>
 <% end %>
 <hr>
 <%= link_to 'New Entry', new_entry_path %> <br>

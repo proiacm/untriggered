@@ -1,6 +1,6 @@
 I am in entires index! <br>
 
 <% @entries.each do |entry| %>
-Entry: <%= link_to entry.content, entry %> <br>
-Emotion: <%= link_to entry.emotion.name, emotion_entries_path(entry.emotion) %>
+Entry Date: <%= link_to entry.created_at.strftime("%A, %B %e, %Y"), entry %>
+- <%= link_to entry.emotion.name, emotion_entries_path(entry.emotion) %> <br>
 <% end %>
