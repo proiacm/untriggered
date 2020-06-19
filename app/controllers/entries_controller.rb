@@ -16,9 +16,11 @@ class EntriesController < ApplicationController
         @emotion = Emotion.find_by(id: params[:emotion_id])
         if @emotion
             @entry = Entry.new(emotion_id: params[:emotion_id])
+        elsif
+            @entry = Entry.new
         else
             redirect_to emotions_path
-        end     
+        end    
     end   
 
 def create 

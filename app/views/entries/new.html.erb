@@ -1,3 +1,12 @@
+<% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 <%= form_for @entry do |f| %>
   <%= f.label 'Time for some introspection:' %> <br>
