@@ -4,6 +4,7 @@ class EmotionsController < ApplicationController
 
     def index 
         @emotions = current_user.emotions
+        @entries = current_user.entries
     end
 
     def show 

@@ -3,5 +3,5 @@ class Entry < ApplicationRecord
     belongs_to :emotion
     accepts_nested_attributes_for :emotion, reject_if: :all_blank
     validates_presence_of :content
-    scope :current_week, -> { where('DATE(created_at) >= ?', 7.days.ago) }
+    scope :recent, -> { where('DATE(created_at) >= ?', 1.day.ago) }
 end

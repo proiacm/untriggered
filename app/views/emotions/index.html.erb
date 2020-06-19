@@ -4,5 +4,9 @@ I am in emotions index!
 <%= link_to emotion.name, emotion %>
 <% end %>
 <hr>
+
+<% @entries.recent.each do |recent|%>
+<%= recent.created_at.strftime("%A, %B %e, %Y") %> - <%= recent.emotion.name %>
+<% end %>
 <%= link_to 'New Entry', new_entry_path %> <br>
 <%= link_to 'All Entries', entries_path %>
