@@ -1,7 +1,6 @@
-I'm in emotion show!
-<%= @emotion.name %>
+<h2>Here are the entries you logged when you were feeling <%= @emotion.name.downcase %>:</h2> <hr>
 <% @entries.each do |entry| %>
-<%= entry.content%>
-<% end %>
+<%= entry.content%> on <%= entry.created_at.strftime("%A, %B %e, %Y")%><br> <br>
+<% end %> <br>
 
-<%= link_to 'Add New Entry', new_emotion_entry_path(@emotion) %>
+<%= link_to "Add New Entry", new_emotion_entry_path(@emotion) %>

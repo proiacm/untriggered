@@ -7,3 +7,13 @@
   #error_explanation {
     color: rgb(175, 3, 3);
   }
+
+  .button1
+  {
+      background-color:#87988E;
+      border-radius: 4px;
+      width: 10%;
+      padding: 1%; 
+      cursor:pointer;
+      font-family: 'Philosopher', sans-serif;  
+  }

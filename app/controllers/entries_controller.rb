@@ -33,9 +33,6 @@ def create
     end
 
     def show 
-        if !@entry 
-            redirect_to entries_path
-        end
     end
 
     def edit 
@@ -51,7 +48,7 @@ def create
 
     def destroy
         @entry.delete
-        redirect_to root_path
+        redirect_to entries_path
     end
 
     private 
