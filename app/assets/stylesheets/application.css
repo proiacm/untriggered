@@ -43,4 +43,14 @@
   clear: both;
 }
 
+.branding {
+  clear: both;
+}
+
+footer.branding {
+  border-top: 2px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
   
