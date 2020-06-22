@@ -1,12 +1,21 @@
-<h2>Live your life untriggered. Here are your previously logged emotions:</h2> <hr>
-<% @emotions.uniq.each do |emotion| %>
-  <h3><%= link_to emotion.name, emotion %></h3> <br>
-<% end %> <hr>
+<div class="wrapper1">
+  <h3>Live your life untriggered. </h3>
+</div>
 
-<h2>Entries in the last day:</h2>
+<div class="wrapper2">
+  <h3>Previously logged emotions:</h3>
+  <% @emotions.uniq.each do |emotion| %>
+    <ul>
+      <h5><%= link_to emotion.name, emotion %></h5> 
+    </ul>
+  <% end %> 
+</div>
 
-<% @entries.recent.each do |recent|%>
+<div class="wrapper3">
+ <h3>Entries in the last day:</h3>
+  <% @entries.recent.each do |recent|%>
     <%= recent.created_at.strftime("%A, %B %e, %Y") %> - <%= recent.emotion.name %>
-<% end %>
+  <% end %>
 <%= link_to 'New Entry', new_entry_path %> <br>
-<%= link_to 'All Entries', entries_path %>
+<%= link_to 'All Entries', entries_path %> 
+</div>
