@@ -8,6 +8,7 @@
     color: rgb(175, 3, 3);
   }
 
+  /* The navbar container */
   .topnav {
     overflow: hidden;
     background-color: #333;
@@ -29,43 +30,17 @@
     color: black;
   }
 
-  .wrapper1 {
-    float: left;
-    position: relative;
-    background: #DBDDDA;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 300px;
-    padding: 2%; 
-    width: 50%;
-    border-radius: 4px;
-  }
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
 
-  .wrapper2 {
-    position: relative;
-    background: #DBDDDA;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 300px;
-    padding: 2%; 
-    width: 50%;
-    border-radius: 4px;
-  }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .wrapper3 {
-    float: right;
-    position: relative;
-    background: #DBDDDA;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 200px;
-    padding: 2%; 
-    width: 50%;
-    border-radius: 4px;
-  }
+  
