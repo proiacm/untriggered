@@ -8,6 +8,12 @@
     color: rgb(175, 3, 3);
   }
 
+  #grad1 {
+    
+    background-color: #659DBD; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #659DBD, #FBEEC1); /* Standard syntax (must be last) */
+  }
+
   /* The navbar container */
   .topnav {
     overflow: hidden;

@@ -16,7 +16,7 @@
   <div class="column">
   <h3>Entries in the last day:</h3>
     <% @entries.recent.each do |recent|%>
-      <%= recent.created_at.strftime("%A, %B %e, %Y") %> - <%= recent.emotion.name %> <br>
+      <%= recent.content %> - <%= recent.emotion.name %> <br> <br>
     <% end %>
   <%= link_to 'New Entry', new_entry_path %> <br>
   <%= link_to 'All Entries', entries_path %> 
