@@ -1,7 +1,5 @@
-I'm in entries show! 
-
 <%= @entry.content %>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %>
-<%= link_to 'Delete', entry_path(@entry), method: 'delete' %>
-<%= link_to 'All Entries', entries_path %>
+<h5> <%= link_to 'Edit', edit_entry_path(@entry) %> </h5>
+<h5> <%= link_to 'Delete', entry_path(@entry), method: 'delete' %> </h5>
+<h5> <%= link_to 'All Entries', entries_path %> </h5>
