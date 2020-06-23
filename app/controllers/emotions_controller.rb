@@ -1,6 +1,6 @@
 class EmotionsController < ApplicationController
 
-    before_action :not_user
+  before_action :authenticate_user!
 
     def index 
         @emotions = current_user.emotions
