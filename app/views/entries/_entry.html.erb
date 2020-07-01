@@ -1,0 +1,13 @@
+<%= form_for @entry do |f| %>
+  <%= f.label 'Time for some introspection:' %> <br>
+  <%= f.text_area :content %> <br> <br>
+  How do you feel? <br>
+  <%= f.label 'Select an existing emotion:' %> <br>
+  <%= f.collection_select :emotion_id, Emotion.all, :id, :name, include_blank: true %> <br> <br>
+  <%= f.label 'Or make a new one:' %> <br>
+  <%= f.fields_for :emotion, @entry.build_emotion do |emf| %>
+    <%= emf.text_field :name %> <br>
+  <% end %> <br/>
+
+  <%= f.submit 'Submit' %>
+<% end %>

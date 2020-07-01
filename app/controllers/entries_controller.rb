@@ -2,10 +2,11 @@ class EntriesController < ApplicationController
 
     before_action :authenticate_user!
     before_action :find_entry, only: [:show, :edit, :update, :destroy]
+    before_action :find_emotion, only: [:index, :new]
 
     def index
         if params[:emotion_id]
-            @emotion = Emotion.find_by_id(params[:emotion_id])
+            # @emotion = Emotion.find_by_id(params[:emotion_id])
             @entries = @emotion.entries
         else
             @entries = current_user.entries
@@ -13,7 +14,7 @@ class EntriesController < ApplicationController
     end
 
     def new 
-        @emotion = Emotion.find_by(id: params[:emotion_id])
+        # @emotion = Emotion.find_by(id: params[:emotion_id])
         if @emotion
             @entry = Entry.new(emotion_id: params[:emotion_id])
         elsif
@@ -61,6 +62,10 @@ def create
 
     def find_entry 
         @entry = current_user.entries.find_by_id(params[:id])
+    end
+
+    def find_emotion
+        @emotion = Emotion.find_by_id(params[:emotion_id])
     end
 
 end
