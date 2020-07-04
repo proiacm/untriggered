@@ -6,7 +6,6 @@ class EntriesController < ApplicationController
 
     def index
         if params[:emotion_id]
-            # @emotion = Emotion.find_by_id(params[:emotion_id])
             @entries = @emotion.entries
         else
             @entries = current_user.entries
@@ -14,7 +13,6 @@ class EntriesController < ApplicationController
     end
 
     def new 
-        # @emotion = Emotion.find_by(id: params[:emotion_id])
         if @emotion
             @entry = Entry.new(emotion_id: params[:emotion_id])
         elsif
