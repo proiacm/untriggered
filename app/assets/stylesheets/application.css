@@ -5,19 +5,19 @@ body {
   background-repeat: no-repeat;
   background-color: #fff;
   color: #29648A;
-  font-family:'Cormorant Upright';font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 18px;
   
 }
 
 /* unvisited link */
 a:link {
-  color: rgb(153, 153, 153);
+  color: #29648A;
 }
 
 /* visited link */
 a:visited {
-  color: rgb(153, 153, 153);
+  color: #29648A;
 }
 
 a:hover {
