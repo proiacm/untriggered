@@ -7,7 +7,13 @@ body {
   color: #29648A;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 18px;
+  text-align: center;
   
+}
+
+.hometext {
+  text-align: match-parent;
+  padding: 20px;
 }
 
 /* unvisited link */
@@ -42,8 +48,8 @@ a:hover {
   /* Navbar links */
   .topnav a {
     float: left;
-    display: block;
-    color: rgb(153, 153, 153);
+    display: inline-block;
+    color: #29648A;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -76,6 +82,7 @@ footer.branding {
   border-top: 2px solid #ccc;
   text-align: center;
   padding: 10px;
+  font-size: 10px;
 }
 
   
